@@ -28,6 +28,11 @@ int main()
   std::cout << "cross(8);\n";
   std::cout << result3;
   std::cout << "\n------------------\n"; // separator
+
+  std::string result4 = lower(6);
+  std::cout << "lower(6);\n";
+  std::cout << result4;
+  std::cout << "\n------------------\n"; // separator
   
   return 0;
 }
