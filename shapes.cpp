@@ -108,13 +108,32 @@ std::string lower(int side_length)
     result += "\n";
     counter++;
   }
-  
   return result;
 }
 
+//This function accepts an int parameter and then prints the top-right half of a square
 std::string upper(int side_length)
 {
-  return 0;
+  std::string result = "";
+  int space = -1;
+  
+  for(int r = 0; r < side_length; r++)
+  {
+    for(int c = 0; c < side_length; c++)
+    {
+      if(c <= space)
+      {
+	result += " ";
+      }
+      else
+      {
+	result += "*";
+      }
+    }
+    result += "\n";
+    space++;
+  }
+  return result;
 }
 
 std::string trapezoid(int width, int height)
