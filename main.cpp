@@ -23,6 +23,11 @@ int main()
   std::cout << "checkerboard(11,6):\n";
   std::cout << result2;
   std::cout << "\n------------------\n"; // separator
+
+  std::string result3 = cross(8);
+  std::cout << "cross(8);\n";
+  std::cout << result3;
+  std::cout << "\n------------------\n"; // separator
   
   return 0;
 }
