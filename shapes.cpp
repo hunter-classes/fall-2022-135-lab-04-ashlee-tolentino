@@ -59,9 +59,31 @@ std::string checkerboard(int width, int height)
   return result;
 }
 
+//This function accepts an int parameter and then prints a diagonal cross of that dimension
 std::string cross(int size)
 {
-  return 0;
+  std::string result = "";
+  int first_half = 0;
+  int last_half = size-1;
+
+  for(int r = 0; r < size; r++)
+  {
+    for(int c = 0; c < size; c++)
+    {
+	if(c == first_half || c == last_half)
+	{
+	  result += "*";
+	}
+	else
+	{
+          result += " ";
+	}
+    }
+    result += "\n";
+    first_half++;
+    last_half--;
+  }
+  return result;
 }
 
 std::string lower(int side_length)
