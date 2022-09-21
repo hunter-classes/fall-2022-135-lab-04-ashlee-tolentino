@@ -16,7 +16,7 @@ These functions accept int parameters and then prints out a series of asterisks 
 std::string box(int width, int height)
 {
   std::string result = "";
-  //std::cout << "Shape:" << std::endl;
+
   for(int r = 0; r < height; r++)
   {
       for(int c = 0; c < width; c++)
@@ -31,8 +31,32 @@ std::string box(int width, int height)
 //This function accepts two int parameters and then prints a rectangular checkerboard of the requested size using asterisks and spaces (alternating)
 std::string checkerboard(int width, int height)
 {
-  
-  return 0;
+  std::string result = "";
+
+  for(int r = 0; r < height; r++)
+  {
+      for(int c = 0; c < width; c++)
+      {
+	if(r % 2 == 0 && c % 2 == 0) //row even and col even
+	{
+	  result += "*";
+	}
+	else if(r % 2 == 0 && c % 2 == 1) //row even and col odd
+	{
+	  result += " ";
+	}
+	else if(r % 2 == 1 && c % 2 == 0) //row odd and col even
+	{
+	  result += " ";
+	}
+	else //row odd and col odd
+	{
+	  result += "*";
+	}
+      }
+      result += "\n";
+  }
+  return result;
 }
 
 std::string cross(int size)
