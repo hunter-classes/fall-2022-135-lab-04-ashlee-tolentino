@@ -86,9 +86,30 @@ std::string cross(int size)
   return result;
 }
 
+//This function accepts an int parameter and then prints the bottom-left half of a square
 std::string lower(int side_length)
 {
-  return 0;
+  std::string result = "";
+  int counter = 0;
+
+  for(int r = 0; r < side_length; r++)
+  {
+    for(int c = 0; c < side_length; c++)
+    {
+      if(c <= counter)
+      {
+	result += "*";
+      }
+      else
+      {
+	result += " ";
+      }
+    }
+    result += "\n";
+    counter++;
+  }
+  
+  return result;
 }
 
 std::string upper(int side_length)
