@@ -33,6 +33,11 @@ int main()
   std::cout << "lower(6);\n";
   std::cout << result4;
   std::cout << "\n------------------\n"; // separator
+
+  std::string result5 = upper(5);
+  std::cout << "upper(5);\n";
+  std::cout << result5;
+  std::cout << "\n------------------\n"; // separator
   
   return 0;
 }
