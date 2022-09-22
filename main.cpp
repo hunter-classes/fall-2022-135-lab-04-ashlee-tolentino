@@ -38,6 +38,11 @@ int main()
   std::cout << "upper(5);\n";
   std::cout << result5;
   std::cout << "\n------------------\n"; // separator
+
+  std::string result6 = trapezoid(12,5);
+  std::cout << "trapezoid(12,5);\n";
+  std::cout << result6;
+  std::cout << "\n------------------\n"; // separator
   
   return 0;
 }
