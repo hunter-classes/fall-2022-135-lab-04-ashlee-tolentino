@@ -136,9 +136,38 @@ std::string upper(int side_length)
   return result;
 }
 
+//This function accepts two int parameters and then prints an upside-down trapezoid
 std::string trapezoid(int width, int height)
 {
-  return 0;
+  std::string result = "";
+  std::string result2 = "Impossible shape!";
+  int spaces = 0;
+  int stars = width;
+
+  if(height > width/2)
+  {
+      return result2;
+  }
+
+  for(int r = 0; r < height; r++)
+  {
+    for(int c = 0; c < stars; c++)
+    {
+      if(r > 0 && c < spaces)
+      {
+	result += " ";
+      }
+      else
+      {
+	result += "*";
+      }
+    }
+    result += "\n";
+    spaces++;
+    stars--;
+  }
+  
+  return result;
 }
 
 std::string checkerboard3x3(int width, int height)
