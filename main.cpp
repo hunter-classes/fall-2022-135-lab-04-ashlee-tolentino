@@ -43,6 +43,11 @@ int main()
   std::cout << "trapezoid(12,5);\n";
   std::cout << result6;
   std::cout << "\n------------------\n"; // separator
+
+  std::string result7 = checkerboard3x3(16,11);
+  std::cout << "checkerboard3x3(16,11);\n";
+  std::cout << result7;
+  std::cout << "\n------------------\n"; // separator
   
   return 0;
 }
