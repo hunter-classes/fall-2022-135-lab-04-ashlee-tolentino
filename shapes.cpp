@@ -170,7 +170,34 @@ std::string trapezoid(int width, int height)
   return result;
 }
 
+//This function accepts two int parameters and then prints a checkerboard of 3-by-3 squares
 std::string checkerboard3x3(int width, int height)
 {
-  return 0;
+  std::string result = "";
+
+  for(int r = 0; r < height; r++)
+  {
+    for(int c = 0; c < width; c++)
+    {
+      if((c % 6 == 0 || c % 6 == 1 || c % 6 == 2 || c % 6 == 6) && (r % 6 == 3 || r % 6 == 4 || r % 6 == 5))
+      {
+	result += " ";
+      }
+      else if(c % 6 == 0 || c % 6 == 1 || c % 6 == 2 || c % 6 == 6)
+      {
+	result += "*";
+      }
+      else if(r % 6 == 3 || r % 6 == 4 || r % 6 == 5)
+      {
+	result += "*";
+      }
+      else
+      {
+	result += " ";
+      }
+    }
+    result += "\n";
+  }
+  
+  return result;
 }
